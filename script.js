@@ -25,23 +25,41 @@ class Rectangle {
 class Square extends Rectangle {
 	constructor(side){
 		super(side,side)
+		this._side = side
+	}
+	get width(){
+		return this._side
 	}
 	set width(value){
+		this._side = value
 		super.width = value
 		super.height = value
 	}
+	get height(){
+		return this._side
+	}
 	set height(value){
+		this._side = value
 		super.width = value
 		super.height = value
 	}
 	getPerimeter(){
-		return this.width * 4
+		return this._side * 4
 	}
 	getArea(){
-		return this.width * this.width
+		return this._side * this._side
 	}
 }
 
 // Do not change the code below this line
 window.Rectangle = Rectangle;
 window.Square = Square;
+
+
+
+
+
+
+
+
+
